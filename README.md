@@ -5,7 +5,7 @@
 
 # Puodeliai
 
-Site published at https://github.com/ievaskyriene/Puodeliai/blob/master/index.html
+Site published at https://ievaskyriene.github.io/Puodeliai/.
 
 
 ### Authors
