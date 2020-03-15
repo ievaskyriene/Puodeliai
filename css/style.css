@@ -1,0 +1,24 @@
+.tower {
+    display: inline-block;
+    max-height: 100vh;
+    width: 100%;
+}
+
+.innertower {
+    display: inline-block;
+    width: 1000px;
+    margin-left: calc((100% - 1000px) / 2);
+    margin-top: 20px;
+}
+
+.row{
+display: block;
+   text-align: center;
+}
+
+img{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    transform: rotate(180deg);
+}
