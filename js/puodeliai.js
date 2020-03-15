@@ -3,7 +3,7 @@
 
     let tower = document.querySelector(".tower");
     let innertower = document.querySelector(".innertower");
-    let cupcounter = 20;
+    let cupcounter = 100;
 
 function rowcount(x){
     let HTML = "";

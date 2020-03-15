@@ -6,8 +6,8 @@
 
 .innertower {
     display: inline-block;
-    width: 1000px;
-    margin-left: calc((100% - 1000px) / 2);
+    width: 1200;
+    margin-left: calc((100% - 1200px) / 2);
     margin-top: 20px;
 }
 
