@@ -3,7 +3,7 @@
 ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 [![HitCount](http://hits.dwyl.com/ievaskyriene/Puodeliai.svg)
 
-# Coming-soon
+# Puodeliai
 
 Site published at https://github.com/ievaskyriene/Puodeliai/blob/master/index.html
 
