@@ -3,7 +3,7 @@
 
     let tower = document.querySelector(".tower");
     let innertower = document.querySelector(".innertower");
-    let cupcounter = 100;
+    let cupcounter = 25;
 
 function rowcount(x){
     let HTML = "";
@@ -13,21 +13,21 @@ function rowcount(x){
 rowcounter = (Math.sqrt(1+(8*x))-1)/2;
 let rowcounterint = parseInt(rowcounter);
 rowcounterint;  
-console.log(rowcounter)
+
 console.log("Bokštas gavosi" + " " + rowcounterint+" "+ "aukštų");
 
 let imageArr = [];
 let imageArrlast = [];
-let imageHML = "";
+let imageHML;
 let cupnumbinrow = 0;
 
 for (let i = 1; i<=rowcounter; i++){
     cupnumbinrow = cupnumbinrow+1;
 }
-console.log(cupnumbinrow)
+
 
 let cupamount = (1+cupnumbinrow)*cupnumbinrow/2;
-console.log(cupamount);
+
 
 let diff = cupcounter - cupamount;
 
