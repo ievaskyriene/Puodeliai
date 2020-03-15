@@ -7,7 +7,6 @@
 
 Site published at https://github.com/ievaskyriene/Puodeliai/blob/master/index.html
 
-Design: [Personal template](https://colorlib.com/preview/theme/personal/)
 
 ### Authors
 [Ieva Skyriene](https://github.com/ievaskyriene)
