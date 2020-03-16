@@ -2,8 +2,8 @@
 
 
     let tower = document.querySelector(".tower");
-    let innertower = document.querySelector(".innertower");
-    let cupcounter =32;
+   
+    let cupcounter = 38;
 
 function rowcount(x){
     let HTML = "";
@@ -24,32 +24,41 @@ for (let i = 1; i<=rowcounter; i++){
     cupnumbinrow = cupnumbinrow+1;
 }
 
-
 let cupamount = (1+cupnumbinrow)*cupnumbinrow/2;
-
 
 let diff = cupcounter - cupamount;
 
+cupnumbinrow = cupnumbinrow + 1;
+
+
+let margin = rowcounterint - cupnumbinrow;
+console.log(rowcounterint)
+console.log(cupnumbinrow)
+console.log(margin)
+
 for (let i = 1; i<=rowcounter; i++){
+    
     if (i < (rowcounter - diff)){
-    imageHML = `<img src="./img/red-cup.png" style = "width: calc(100% / ${cupnumbinrow}) heigth: calc(100% / ${rowcounterint})"></img>`
+    imageHML = `<img src="./img/red-cup.png" style = "width: calc(100% / ${cupnumbinrow}); height: 100%;"></img>`
     imageArr.push(imageHML);
-    HTML += `<div class="row">
-    ${imageArr}
+    console.log(imageArr.length);
+    HTML += `<div class="row" style = "width: 100%; height: calc(100% / ${rowcounterint}); margin-left: calc(100% / ${rowcounterint} * (${rowcounterint} - ${imageArr.length}) / 2);">
+    ${imageArr.join("")}
     </div>`;}
     
     else {
-
-        imageHML = `<img src="./img/red-cup.png" style = "width: calc(100% / ${cupnumbinrow}) heigth: calc(100% / ${rowcounterint})"></img>`
+        
+        imageHML = `<img src="./img/red-cup.png" style = "width: calc(100% / ${cupnumbinrow}); height: 100%;"></img>`
         imageArr.push(imageHML);
-        HTML += `<div class="row">
-        <img src="./img/red-cup.png" style = "width: calc(100% / ${cupnumbinrow}) heigth: calc(100% / ${rowcounterint})"></img>
-        ${imageArr}
+        console.log(imageArr.length);
+        HTML += `<div class="row" style = "width: 100%; height: calc(100% / ${rowcounterint}); margin-left: calc(100% / ${rowcounterint} * (${rowcounterint} - ${imageArr.length}) / 2);">
+        <img src="./img/red-cup.png" style = "width: calc(100% / ${cupnumbinrow}); height: 100%;"></img>
+        ${imageArr.join("")}
+    
         </div>`;
 
     }
 }
-
 
 
 /*
@@ -66,7 +75,7 @@ else {
 */
 
 
-innertower.innerHTML = HTML;
+tower.innerHTML = HTML;
 
 }
 
