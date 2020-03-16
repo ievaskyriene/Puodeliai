@@ -9,12 +9,12 @@
 
 .row{
 display: inline-block;
-   
+float: left;  
 
 }
 
 img{
     display: inline-block;
-    float: left;
+    float: left;  
     transform: rotate(180deg);
 }

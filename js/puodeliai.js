@@ -3,7 +3,7 @@
 
     let tower = document.querySelector(".tower");
    
-    let cupcounter = 3;
+    let cupcounter = 23;
 
 function rowcount(x){
     let HTML = "";
@@ -31,18 +31,14 @@ let diff = cupcounter - cupamount;
 cupnumbinrow = cupnumbinrow + 1;
 
 
-let margin = rowcounterint - cupnumbinrow;
-console.log(rowcounterint)
-console.log(cupnumbinrow)
-console.log(margin)
-
 for (let i = 1; i<=rowcounter; i++){
     
     if (i <= (rowcounter - diff)){
     imageHML = `<img src="./img/red-cup.png" style = "width: calc(100% / ${cupnumbinrow}); height: 100%;"></img>`
+
     imageArr.push(imageHML);
-    console.log(imageArr.length);
-    HTML += `<div class="row" style = "width: 100%; height: calc(100% / ${rowcounterint}); margin-left: calc(100% * (${rowcounterint} - ${imageArr.length}) / 2 / ${rowcounterint});">
+   
+    HTML += `<div class="row" style = "width: 100%; height: calc(100% / ${rowcounterint}); margin-left: calc(100% * (${rowcounterint} - ${imageArr.length}) / 2 / ${rowcounterint+1});">
     ${imageArr.join("")}
     </div>`;}
     
@@ -51,7 +47,7 @@ for (let i = 1; i<=rowcounter; i++){
         imageHML = `<img src="./img/red-cup.png" style = "width: calc(100% / ${cupnumbinrow}); height: 100%;"></img>`
         imageArr.push(imageHML);
         console.log(imageArr.length);
-        HTML += `<div class="row" style = "width: 100%; height: calc(100% / ${rowcounterint}); margin-left: calc(100% * (${rowcounterint} - ${imageArr.length}) / 2 / ${rowcounterint});">
+        HTML += `<div class="row" style = "width: 100%; height: calc(100% / ${rowcounterint}); margin-left: calc(100% * (${rowcounterint} - ${imageArr.length}) / 2 / ${rowcounterint+1});">
         <img src="./img/red-cup.png" style = "width: calc(100% / ${cupnumbinrow}); height: 100%;"></img>
         ${imageArr.join("")}
     
