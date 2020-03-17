@@ -4,36 +4,39 @@ let tower = document.querySelector(".tower");
 
 function towerBuild(x){
     let HTML = "";
-    let rowcounter = (Math.sqrt(1+(8*x))-1)/2;
-    let rowcounterint = parseInt(rowcounter);   
+    //suskaičiuoju eilučių skaičių
+    let rowCounter = (Math.sqrt(1+(8*x))-1)/2; //formulę sumos skaičių nuo iki suskaičiavimui tik atvirkščia. Naudojau diskriminantą
+    let rowcounterInt = parseInt(rowCounter);   
 
-    console.log("Bokštas gavosi" + " " + rowcounterint+" "+ "aukštų");
+    console.log("Bokštas gavosi" + " " + rowcounterInt+" "+ "aukštų");
 
     let imageArr = [];
-    let imageHML;
-    let cupnumbinrow = 0;
+    let imageHTML;
+    let cupNumInRow = 0;
 
-    for (let i = 1; i<=rowcounter; i++){
-        cupnumbinrow = cupnumbinrow+1;
+    for (let i = 1; i<=rowCounter; i++){
+        cupNumInRow = cupNumInRow+1;
         }
 
-    let cupamount = (1+cupnumbinrow)*cupnumbinrow/2;
-    let diff = x - cupamount;
-    cupnumbinrow = cupnumbinrow + 1;
+    //formulė puodelių sumos suskaičiavimui, kai žinomas eilių skaičius ir puodelių skaičius eilėje
+    let cupAmountCalc = (1+cupNumInRow)*cupNumInRow/2;
+    //paduotų puodelių skirtumas nuo suskaičiuoto, jeigu bokštas būtų taisyklingas
+    let diff = x - cupAmountCalc;
+    cupNumInRow = cupNumInRow + 1; //kad paskaičiuotų gerą puodelio plotį ir tasi atvejais, kai bokštas netaisyklingas
 
-    for (let i = 1; i<=rowcounter; i++){
-        if (i <= (rowcounter - diff)){
-            imageHML = `<img src="./img/red-cup.png" style = "width: calc(100% / ${cupnumbinrow}); height: 100%;"></img>`
-            imageArr.push(imageHML);
-            HTML += `<div class="row" style = "width: 100%; height: calc(100% / ${rowcounterint}); margin-left: calc(100% * (${rowcounterint} - ${imageArr.length}) / 2 / ${rowcounterint+1});">
+    for (let i = 1; i<=rowCounter; i++){
+        if (i <= (rowCounter - diff)){
+            imageHTML = `<img src="./img/red-cup.png" style = "width: calc(100% / ${cupNumInRow}); height: 100%;"></img>`
+            imageArr.push(imageHTML);
+            HTML += `<div class="row" style = "width: 100%; height: calc(100% / ${rowcounterInt}); margin-left: calc(100% * (${rowcounterInt} - ${imageArr.length}) / 2 / ${rowcounterInt+1});">
             ${imageArr.join("")}
             </div>`;
         }
         else {
-            imageHML = `<img src="./img/red-cup.png" style = "width: calc(100% / ${cupnumbinrow}); height: 100%;"></img>`
-            imageArr.push(imageHML);
-            HTML += `<div class="row" style = "width: 100%; height: calc(100% / ${rowcounterint}); margin-left: calc(100% * (${rowcounterint} - ${imageArr.length}) / 2 / ${rowcounterint+1});">
-            <img src="./img/red-cup.png" style = "width: calc(100% / ${cupnumbinrow}); height: 100%;"></img>
+            imageHTML = `<img src="./img/red-cup.png" style = "width: calc(100% / ${cupNumInRow}); height: 100%;"></img>`
+            imageArr.push(imageHTML);
+            HTML += `<div class="row" style = "width: 100%; height: calc(100% / ${rowcounterInt}); margin-left: calc(100% * (${rowcounterInt} - ${imageArr.length}) / 2 / ${rowcounterInt+1});">
+            <img src="./img/red-cup.png" style = "width: calc(100% / ${cupNumInRow}); height: 100%;"></img>
             ${imageArr.join("")}
             </div>`;
         }
