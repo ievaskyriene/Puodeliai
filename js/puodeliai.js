@@ -3,7 +3,7 @@
 
     let tower = document.querySelector(".tower");
    
-    let cupcounter = 3;
+    let cupcounter = 6;
 
 function rowcount(x){
     let HTML = "";
@@ -26,7 +26,7 @@ for (let i = 1; i<=rowcounter; i++){
 
 let cupamount = (1+cupnumbinrow)*cupnumbinrow/2;
 
-let diff = cupcounter - cupamount;
+let diff = x - cupamount;
 
 cupnumbinrow = cupnumbinrow + 1;
 
@@ -75,7 +75,7 @@ tower.innerHTML = HTML;
 
 }
 
-rowcount(cupcounter)
+rowcount(10)
 
 /*let cupamount = (1+cupnumbinrow)*cupnumbinrow/2;*/
 
